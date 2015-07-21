@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Google Open Sans -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- build:css(..) static/dist/lib/vendor.css -->
+    <!-- bower:css -->
+    <!-- Font awesome -->
+    <link href="static/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main Inspinia CSS files -->
+    <link href="static/app/lib/animate/animate.css" rel="stylesheet" type="text/css">
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Gae styles -->
+    <!-- build:css(..) static/dist/css/style.css -->
+    <link href="static/app/css/style.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <!-- Page title set in pageTitle directive -->
+    <title dir-page-title></title>
+
+</head>
+<body>
+
+    <div ui-view></div>
+
+
+
+    <!-- build:js(..) static/dist/lib/vendor.js -->
+
+    <!-- jQuery and Bootstrap -->
+    <script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="static/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/bower_components/underscore/underscore.js"></script>
+
+    <!-- MetsiMenu -->
+    <script src="static/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- SlimScroll -->
+    <script src="static/bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Peace JS-->
+    <script src="static/bower_components/PACE/pace.min.js"></script>
+
+    <!-- Angular scripts-->
+    <script src="static/bower_components/angular/angular.min.js"></script>
+    <script src="static/bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="static/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="static/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="static/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="static/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="static/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- Angular Dependiences -->
+    <!--                      -->
+    <!--                      -->
+    <!--                      -->
+
+    <!-- Custom and plugin javascript -->
+    <script src="static/app/lib/inspinia/inspinia.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- build:js(..) static/dist/js/app.js -->
+
+    <!-- Angular App Script -->
+    <script src="static/app/js/app.js"></script>
+    <script src="static/app/js/app-config.js"></script>
+    <script src="static/app/js/app-constants.js"></script>
+    <script src="static/app/js/app-routes.js"></script>
+    <!--<script src="static/app/js/app-interceptor.js"></script>-->
+
+    <!-- Angular App Core Module -->
+    <script src="static/app/js/module/core/_module.js"></script>
+    <!-- Angular App Core Module animations -->
+    <script src="static/app/js/module/core/animations/_module.js"></script>
+    <script src="static/app/js/module/core/animations/fade-in.js"></script>
+    <!-- Angular App Core Module controllers -->
+    <script src="static/app/js/module/core/controllers/_module.js"></script>
+    <script src="static/app/js/module/core/controllers/base-controller.js"></script>
+    <script src="static/app/js/module/core/controllers/main-controller.js"></script>
+    <!-- Angular App Core Module directives -->
+    <script src="static/app/js/module/core/directives/_module.js"></script>
+    <script src="static/app/js/module/core/directives/minimaliza-sidebar-directive.js"></script>
+    <script src="static/app/js/module/core/directives/modal-directive.js"></script>
+    <script src="static/app/js/module/core/directives/notification-directive.js"></script>
+    <script src="static/app/js/module/core/directives/page-title-directive.js"></script>
+    <script src="static/app/js/module/core/directives/side-navigation-directive.js"></script>
+    <!-- Angular App Core Module services -->
+    <script src="static/app/js/module/core/services/_module.js"></script>
+    <script src="static/app/js/module/core/services/messages-constants.js"></script>
+    <script src="static/app/js/module/core/services/messaging-factory.js"></script>
+    <script src="static/app/js/module/core/services/modal-factory.js"></script>
+    <script src="static/app/js/module/core/services/model-transformer-factory.js"></script>
+    <script src="static/app/js/module/core/services/notification-factory.js"></script>
+    <script src="static/app/js/module/core/services/spinner-factory.js"></script>
+
+    <!-- Angular App Authentication Module -->
+    <script src="static/app/js/module/authentication/_module.js"></script>
+    <!-- Angular App Core Module controllers -->
+    <script src="static/app/js/module/authentication/controllers/_module.js"></script>
+    <script src="static/app/js/module/authentication/controllers/email-verification-by-token-controller.js"></script>
+    <script src="static/app/js/module/authentication/controllers/login-controller.js"></script>
+    <script src="static/app/js/module/authentication/controllers/reset-password-confirmation-controller.js"></script>
+    <script src="static/app/js/module/authentication/controllers/reset-password-controller.js"></script>
+    <script src="static/app/js/module/authentication/controllers/signup-controller.js"></script>
+    <!-- Angular App Core Module services -->
+    <script src="static/app/js/module/authentication/services/_module.js"></script>
+    <script src="static/app/js/module/authentication/services/app-run.js"></script>
+    <script src="static/app/js/module/authentication/services/auth-factory.js"></script>
+    <script src="static/app/js/module/authentication/services/reset-password-factory.js"></script>
+    <script src="static/app/js/module/authentication/services/reset-password-resource-factory.js"></script>
+    <script src="static/app/js/module/authentication/services/user-model.js"></script>
+
+    <!-- endbuild -->
+
+
+</body>
+</html>

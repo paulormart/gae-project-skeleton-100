@@ -1,0 +1,43 @@
+application: gae-project-skeleton-100
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- static/app/.*
+- static/node_modules/.*
+- static/rest_framework/.*
+- static/test/.*
+- static/Gruntfile.js
+- static/package.json
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /tasks/.*
+  script: gae.main.app
+  login: admin
+
+- url: /.*
+  script: gae.main.app
+
+builtins:
+- deferred: on
+
+libraries:
+- name: django
+  version: "1.5"
+- name: PIL
+  version: latest
+- name: ssl
+  version: latest
+
+env_variables:
+  SECRET_KEY: 'k37x^j1-vf9^0639a#fk5xk$9leff&fr@2%^j%l^!h0+#ca9rw'

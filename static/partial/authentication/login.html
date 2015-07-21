@@ -1,0 +1,47 @@
+<br>
+<br>
+<div class="row">
+
+    <div class="col-sm-2 col-sm-offset-5">
+
+        <form name="form" ng-show="!ctrl.user.isLoggedIn()"
+              ng-submit="ctrl.submit(form.$valid)" role="form" novalidate>
+
+            <div id="email_container" class="form-group">
+                <label for="email_container">Email</label>
+                <input ng-model="ctrl.email" type="email" name="email" class="form-control" required/>
+                <span class="help-block" ng-show="form.email.$invalid && form.email.$dirty">
+                    {{ errorMessage('email'); }}
+                </span>
+            </div>
+
+            <div id="password_container" class="form-group">
+                <label for="password_container">Password</label>
+                <div class="input-group">
+                    <input ng-model="ctrl.password" type="password" name="password" class="form-control" required/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="ctrl.forgot_password_url()">?</button>
+                        </span>
+                </div>
+                <span class="help-block" ng-show="form.password.$invalid && form.password.$dirty">
+                    {{ errorMessage('password'); }}
+                </span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" ng-disabled="form.$invalid || form.$pristine" class="btn btn-default">
+                    Login
+                </button>
+            </div>
+
+            <div class="form-group">
+                <div class="footnote">
+                    Don't have an account? <a ng-click="ctrl.signup_url()">Sign Up</a>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
