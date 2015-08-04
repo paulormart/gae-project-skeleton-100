@@ -1,4 +1,4 @@
-mapiproject - skeleton
+project - skeleton
 ===========
 
 Skeleton for a AngularJS project and Django running on Google App Engine using Google Datastore
